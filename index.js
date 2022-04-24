@@ -11,4 +11,20 @@ dotenv.config()
 
 
 
+const PORT = process.env.PORT;
+
+mongoose.connect(process.env.DB_URL).then(() => {
+    console.log('Access to database granted')
+})
+.catch((error) => {
+    console.log(error)
+});
+
+app.use(cors());
+app.use(express.json());
+
+app.listen(process.env.PORT || 5000, () => console.log(`Listening on port ${PORT}`))
+
+
+
 
