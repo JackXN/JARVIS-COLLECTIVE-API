@@ -9,6 +9,7 @@ const ProductSchema = new mongoose.Schema(
         price: {type: Number, required: true},
         inStock: {type: String, required: true},
         collectionName: {type: String, required: false},
+        hasCustomWeapon: {type:String, required: true},
         color: {type: String, required: false},
     },
     {timestamps: true}
