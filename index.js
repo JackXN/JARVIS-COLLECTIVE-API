@@ -27,7 +27,7 @@ app.use(express.json());
 
 // ROUTES
 app.use("/api/products", productRoute);
-app.use('/api/store/collections', collectionRoute)
+app.use('/api/collections', collectionRoute)
 app.use(timeout('5s'))
 
 app.listen(process.env.PORT || 5000, () => console.log(`Listening on port ${PORT}`))
