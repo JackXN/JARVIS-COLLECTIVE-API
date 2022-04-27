@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
 dotenv.config()
+var timeout = require('connect-timeout')
 
 
 // ROUTES
@@ -27,6 +28,7 @@ app.use(express.json());
 // ROUTES
 app.use("/api/products", productRoute);
 app.use('/api/collections', collectionRoute)
+app.use(timeout('5s'))
 
 app.listen(process.env.PORT || 5000, () => console.log(`Listening on port ${PORT}`))
 
