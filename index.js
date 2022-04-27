@@ -9,6 +9,7 @@ dotenv.config()
 
 // ROUTES
 const productRoute = require("./routes/product");
+const collectionRoute = require('./routes/collection')
 
 
 const PORT = process.env.PORT;
@@ -25,6 +26,7 @@ app.use(express.json());
 
 // ROUTES
 app.use("/api/products", productRoute);
+app.use('/api/collections', collectionRoute)
 
 app.listen(process.env.PORT || 5000, () => console.log(`Listening on port ${PORT}`))
 
