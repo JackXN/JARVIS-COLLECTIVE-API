@@ -30,7 +30,7 @@ router.get('/find/:id', async (req,res) => {
 
 
 // GET ALL PRODUCTS
-router.get("/", async (req, res) => {
+router.get("/store", async (req, res) => {
     const qNew = req.query.new;
     const qCategory = req.query.category;
     try {
